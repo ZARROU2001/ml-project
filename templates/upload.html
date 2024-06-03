@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            /* Set background image */
+            background-image: url("{{ url_for('static', filename='images/img1.webp') }}");
+            /* Center and cover the background image */
+            background-position: center;
+        
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            /* background-color: #a38882; */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: #f4f4f9;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+            padding: 70px; /* Adjust as needed */
+        }
+        input[type="file"] {
+            display: block;
+            margin: -20px auto;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 20px 20px;
+            border-radius: 4px;
+            margin-top: 20px; /* Adjust as needed */
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Upload a file to check for malware</h2>
+        <form method="POST" action="/predict" enctype="multipart/form-data">
+            <input type="file" name="file">
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>

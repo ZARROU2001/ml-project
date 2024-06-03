@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résultat de la prédiction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            /* Set background image */
+            background-position: center;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .malware-name {
+            font-size: 24px; /* Taille de police personnalisée */
+            font-weight: bold; /* Police en gras */
+            color: #6b3f0c; /* Couleur de texte rouge */
+            text-transform: capitalize; /* Mettre la première lettre en majuscule */
+            text-align: center; /* Alignement centré */
+            margin-top: 20px; /* Marge en haut */
+        }
+
+        .container {
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: antiquewhite;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Résultat de la prédiction</h1>
+        <p>Le type de malware détecté est :</p>
+        <!-- Utilisation de la classe "malware-name" pour appliquer le style CSS -->
+        <p class="malware-name">{{ message }}</p>
+    </div>
+</body>
+</html>

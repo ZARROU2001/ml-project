@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Malware Detection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            background-image: url("{{ url_for('static', filename='images/img2.png') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            background-color: #6ec4a7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="window.location.href='/upload_image'">Malware Image Detection</button>
+        <button onclick="window.location.href='/upload'">Malware Signature Detection</button>
+    </div>
+</body>
+</html>
